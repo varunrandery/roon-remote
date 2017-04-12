@@ -7,7 +7,7 @@ A tiny Node.js webserver to handle and forward RESTful calls for Roon's API. Use
 *  Node.js and the NPM package manager (installation instructions below)
 *  **Optional but highly recommended**: the [Workflow app for iOS](https://workflow.is/) <br>[See usage instructions below.](#using-workflow-for-ios-as-a-remote)
 
-### Installation
+### Installation and usage
 #### Install Node.js (skip this step if Node.js and NPM are already installed).
 1. Install Node.js from here: https://nodejs.com/
 
@@ -85,6 +85,6 @@ On an iOS device (how I use the extension), you can use the Workflow app for iOS
 3. During the workflow import, enter your Node.js server's IP address and the port you're using (3000 by default).
 If you have the Today Widget in the Notification Center, you can start the workflow from there; it should populate a list of zones by querying the Node.js server.
 
-### Contact
+### Getting in touch + pull requests
 *  If you have any questions / comments, submit an issue or send me an email at [varun@randery.com](mailto:varun@randery.com).
 *  Feel free to start a pull request if you have any ideas.
