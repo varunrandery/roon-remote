@@ -2,18 +2,18 @@
 A tiny Node.js webserver to handle and forward RESTful calls for Roon's API. Uses Node.js and Express.js to accept HTTP GET requests and forward them over websocket to your Roon core, using Roon's API (introduced in 1.3).
 
 ### Prerequisites
-* Roon 1.3 or newer
-* Roon core running on a Raspberry Pi (or other Linux system, including macOS) or Windows
-* Node.js and the NPM package manager (installation instructions below)
-* **Optional but highly recommended**: the [Workflow app for iOS](https://workflow.is/)
+*  Roon 1.3 or newer
+*  Roon core running on a Raspberry Pi (or other Linux system, including macOS) or Windows
+*  Node.js and the NPM package manager (installation instructions below)
+*  **Optional but highly recommended**: the [Workflow app for iOS](https://workflow.is/) <br>[See usage instructions below.](#using-workflow-for-ios-as-a-remote)
 
 ### Installation
 #### Install Node.js (skip this step if Node.js and NPM are already installed).
 1. Install Node.js from here: https://nodejs.com/
 
-   * On Windows, install from the above link.
-   * On macOS, install using Homebrew: `brew install node` (if you don't have Homebrew install from the link).
-   * On Linux, you can use your distribution's package manager, but make sure it installs a recent version of Node.js. Otherwise just install from the above link.
+   *  On Windows, install from the above link.
+   *  On macOS, install using Homebrew: `brew install node` (if you don't have Homebrew install from the link).
+   *  On Linux, you can use your distribution's package manager, but make sure it installs a recent version of Node.js. Otherwise just install from the above link.
    
 2. Check that you are running node 5.x or higher by typing: `node -v`
 #### Set up the server
@@ -79,4 +79,12 @@ A tiny Node.js webserver to handle and forward RESTful calls for Roon's API. Use
 There are a number of ways to run a Node.js server as a service in Windows, macOS or Linux. I recommend using [node-windows](https://www.npmjs.com/package/node-windows) (which has sister variants for macOS and Linux, [node-mac](https://github.com/coreybutler/node-mac) and [node-linux](https://github.com/coreybutler/node-linux) respectively).
 
 ### Using Workflow for iOS as a remote
-...
+On an iOS device (how I use the extension), you can use the Workflow app for iOS to send HTTP GET requests. I recommend you set up Workflow like this:
+1. Download the [Workflow app](https://workflow.is/) from the App Store.
+2. Click this link on the iOS device: https://workflow.is/workflows/7bf76714e84a4030a1af292fe40cf02b
+3. During the workflow import, enter your Node.js server's IP address and the port you're using (3000 by default).
+If you have the Today Widget in the Notification Center, you can start the workflow from there; it should populate a list of zones by querying the Node.js server.
+
+### Contact
+*  If you have any questions / comments, submit an issue or send me an email at [varun@randery.com](mailto:varun@randery.com).
+*  Feel free to start a pull request if you have any ideas.
