@@ -66,4 +66,12 @@ A tiny Node.js webserver to handle and forward RESTful calls for Roon's API. Use
    ```
    http://<server>:3000/api?command=<command>&zone=<zone_display_name>
    ```
-   Where _\<server\>_ is your host's IP address, _\<command\>_ is the control action to perform...
+   Where _\<server\>_ is your host's IP address, _\<command\>_ is the control action to perform, which can be any of the following (from the [Roon Transport API docs](https://roonlabs.github.io/node-roon-api-transport/RoonApiTransport.html)):
+   ```
+   "play" - If paused or stopped, start playback
+   "pause" - If playing or loading, pause playback
+   "playpause" - If paused or stopped, start playback. If playing or loading, pause playback.
+   "previous" - Go to the start of the current track, or to the previous track
+   "next" - Advance to the next track
+   ```
+   _\<zone\>_ should be the zone's display name, URL encoded. For instance, _Living Room_ becomes _Living%20Room_.
