@@ -13,7 +13,7 @@ A tiny Node.js webserver to handle and forward RESTful calls for Roon's API. Use
 
    *  On Windows, install from the above link.
    *  On macOS, install using Homebrew: `brew install node` (if you don't have Homebrew install from the link).
-   *  On Linux, you can use your distribution's package manager, but make sure it installs a recent version of Node.js. Otherwise just install from the above link.
+   *  On Linux, you can use your distribution's package manager, but make sure it installs a recent version of Node.js. Otherwise, just install from the above link.
    
 2. Check that you are running node 5.x or higher by typing: `node -v`
 #### Set up the server
