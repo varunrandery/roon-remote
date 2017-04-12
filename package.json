@@ -1,0 +1,12 @@
+{
+  "name": "varun-remote",
+  "version": "1.0.0",
+  "description": "Remote to control my Roon setup.",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.15.2",
+    "node-roon-api": "github:roonlabs/node-roon-api",
+    "node-roon-api-transport": "github:roonlabs/node-roon-api-transport",
+    "node-roon-api-status": "github:roonlabs/node-roon-api-status"
+  }
+}
