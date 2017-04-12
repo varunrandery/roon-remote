@@ -5,7 +5,7 @@ A tiny Node.js webserver to handle and forward RESTful calls for Roon's API. Use
 * Roon 1.3 or newer
 * Roon core running on a Raspberry Pi (or other Linux system, including macOS) or Windows
 * Node.js and the NPM package manager (installation instructions below)
-* **Optional but recommended**: the [Workflow app for iOS](https://workflow.is/)
+* **Optional but highly recommended**: the [Workflow app for iOS](https://workflow.is/)
 
 ### Installation
 #### Install Node.js (skip this step if Node.js and NPM are already installed).
@@ -75,3 +75,8 @@ A tiny Node.js webserver to handle and forward RESTful calls for Roon's API. Use
    "next" - Advance to the next track
    ```
    _\<zone\>_ should be the zone's display name, URL encoded. For instance, _Living Room_ becomes _Living%20Room_.
+#### Running the server as a service
+There are a number of ways to run a Node.js server as a service in Windows, macOS or Linux. I recommend using [node-windows](https://www.npmjs.com/package/node-windows) (which has sister variants for macOS and Linux, [node-mac](https://github.com/coreybutler/node-mac) and [node-linux](https://github.com/coreybutler/node-linux) respectively).
+
+### Using Workflow for iOS as a remote
+...
