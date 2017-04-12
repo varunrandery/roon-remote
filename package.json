@@ -1,5 +1,5 @@
 {
-  "name": "varun-remote",
+  "name": "roon-remote",
   "version": "1.0.0",
   "description": "Remote to control my Roon setup.",
   "main": "app.js",
