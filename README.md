@@ -12,7 +12,7 @@ A tiny Node.js webserver to handle and forward RESTful calls for Roon's API. Use
 1. Install Node.js from here: https://nodejs.com/
 
    * On Windows, install from the above link.
-   * On macOS, install using Homebrew: `brew install node` (if you don't have Homebrew install from the link)
+   * On macOS, install using Homebrew: `brew install node` (if you don't have Homebrew install from the link).
    * On Linux, you can use your distribution's package manager, but make sure it installs a recent version of Node.js. Otherwise just install from the above link.
    
 2. Check that you are running node 5.x or higher by typing: `node -v`
@@ -38,4 +38,22 @@ A tiny Node.js webserver to handle and forward RESTful calls for Roon's API. Use
 
 3. Navigate to the folder in PowerShell or Git Bash (Windows), Terminal (macOS) or whatever Linux distro's bash terminal you're using. Type the following: `npm install`. This will install the Express.js module and dependencies (needed for the webserver), as well as all of the Roon API's dependencies (according to your package.json file).
 
-4. ...
+4. Next, test your server by typing `node .`. If all goes well, you should see some very verbose console output, which eventually begins to 'ping':
+   ```
+   <- REQUEST 1 com.roonlabs.ping:1/ping 
+   -> COMPLETE 1 Success 
+   <- REQUEST 1 com.roonlabs.ping:1/ping 
+   -> COMPLETE 1 Success 
+   <- REQUEST 2 com.roonlabs.ping:1/ping 
+   -> COMPLETE 2 Success 
+   <- REQUEST 2 com.roonlabs.ping:1/ping 
+   -> COMPLETE 2 Success 
+   ...
+   ```
+   If this happens, the API has successfully connected to your Roon core. If you encounter any error messages here, try starting the process again as root, verifying that your Roon core is up and accessible, and that you have at minimum Roon 1.3.
+
+5. To make a request, format your HTTP GET like this:
+   ```
+   http://<server>:3000/api?command=<command>&zone=<zone_display_name>
+   ```
+   ...
