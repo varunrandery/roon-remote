@@ -36,9 +36,17 @@ A tiny Node.js webserver to handle and forward RESTful calls for Roon's API. Use
    ```
    This file tells Node.js what to install in the next step. You can change the name and description here, but the rest of the file should remain unchanged (unless in future you need to install new dependencies, in which case you should ass to the dependencies list and run `npm install` again. For now, move on the step 3.
 
-3. Navigate to the folder in PowerShell or Git Bash (Windows), Terminal (macOS) or whatever Linux distro's bash terminal you're using. Type the following: `npm install`. This will install the Express.js module and dependencies (needed for the webserver), as well as all of the Roon API's dependencies (according to your package.json file).
+3. Navigate to the folder in PowerShell or Git Bash (Windows), Terminal (macOS) or whatever Linux distro's bash terminal you're using. Type the following: 
+   ```
+   npm install
+   ```
+   This will install the Express.js module and dependencies (needed for the webserver), as well as all of the Roon API's dependencies (according to your package.json file).
 
-4. Next, test your server by typing `node .`. If all goes well, you should see some very verbose console output, which eventually begins to 'ping':
+4. Next, test your server by typing: 
+   ```
+   node .
+   ``` 
+   If all goes well, you should see some very verbose console output, which eventually begins to 'ping':
    ```
    <- REQUEST 1 com.roonlabs.ping:1/ping 
    -> COMPLETE 1 Success 
@@ -52,8 +60,10 @@ A tiny Node.js webserver to handle and forward RESTful calls for Roon's API. Use
    ```
    If this happens, the API has successfully connected to your Roon core. If you encounter any error messages here, try starting the process again as root, verifying that your Roon core is up and accessible, and that you have at minimum Roon 1.3.
 
-5. To make a request, format your HTTP GET like this:
+5. Finally, to allow the extension to communicate with your Roon core, go to _Settings_ -> _Extensions_ inside Roon and click _Enable_ next to the extension. It should show a status of: 'Extension running...'.
+
+6. To make a request, format your HTTP GET like this:
    ```
    http://<server>:3000/api?command=<command>&zone=<zone_display_name>
    ```
-   ...
+   Where _\<server\>_ is your host's IP address, _\<command\>_ is the control action to perform...
