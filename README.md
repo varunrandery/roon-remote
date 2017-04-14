@@ -82,7 +82,8 @@ There are a number of ways to run a Node.js server as a service in Windows, macO
 On an iOS device (how I use the extension), you can use the Workflow app for iOS to send HTTP GET requests. I recommend you set up Workflow like this:
 1. Download the [Workflow app](https://workflow.is/) from the App Store.
 2. Click this link on the iOS device: https://workflow.is/workflows/7bf76714e84a4030a1af292fe40cf02b
-3. During the workflow import, enter the IP address of the device running the Node.js webserver and the port you're using (3000 by default). It might look like: _192.168.1.20:3000_
+3. During the workflow import, enter the IP address of the device running the Node.js webserver and the port you're using (3000 by default). It might look like: _192.168.1.20:3000_.
+
 If you have the Today Widget in the Notification Center, you can start the workflow from there; it should populate a list of zones by querying the Node.js server.
 
 ### Getting in touch + pull requests
