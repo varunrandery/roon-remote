@@ -34,7 +34,7 @@ A tiny Node.js webserver to handle and forward RESTful calls for Roon's API. Use
       }
    }
    ```
-   This file tells Node.js what to install in the next step. You can change the name and description here, but the rest of the file should remain unchanged (unless in future you need to install new dependencies, in which case you should ass to the dependencies list and run `npm install` again. For now, move on the step 3.
+   This file tells Node.js what to install in the next step. You can change the name and description here, but the rest of the file should remain unchanged (unless in future you need to install new dependencies, in which case you should add to the dependencies list and run `npm install` again. For now, move on the step 3.
 
 3. Navigate to the folder in PowerShell or Git Bash (Windows), Terminal (macOS) or whatever Linux distro's bash terminal you're using. Type the following: 
    ```
